@@ -53,7 +53,7 @@ def lowercase_text(text):
     >>> lowercase_text('AbC')
     'abc'
     """
-    pass
+    return text.lower()
 
 
 def remove_punctuation(text, punctuation=punctuation):
@@ -81,7 +81,9 @@ def remove_punctuation(text, punctuation=punctuation):
     """
     # TODO: Your code here
     # Hint: Loop through each punctuation character and replace it
-    pass
+    for char in punctuation:
+        text = text.replace(char, "")
+    return text
 
 
 def remove_newline(text):
@@ -105,7 +107,7 @@ def remove_newline(text):
     'life happens when youre busy making other plans'
     """
     # TODO: Your code here
-    pass
+    return " ".join(text.split())
 
 
 def split_text_into_words(text):
